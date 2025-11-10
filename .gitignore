@@ -9,3 +9,5 @@ Ninja*
 .httr-oauth
 .DS_Store
 .quarto
+git-push*
+git-pull*
