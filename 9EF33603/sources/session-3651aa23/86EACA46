@@ -1,0 +1,27 @@
+{
+    "id": "86EACA46",
+    "path": "~/git/R/R-Syntax-Talking-Points/index.Rmd",
+    "project_path": "index.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1762755923023.0,
+    "source_on_save": true,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "236,6",
+        "scrollLine": "211",
+        "disableDependencyDiscovery": "1"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1762766807,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1762766807719,
+    "read_only": false,
+    "read_only_alternatives": []
+}

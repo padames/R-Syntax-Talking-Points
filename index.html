@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>R-Syntax Talking Points</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Pablo Adames" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="extra-styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# R-Syntax Talking Points
+]
+.subtitle[
+## What you need to know
+]
+.author[
+### Pablo Adames
+]
+.institute[
+### CalgaryR
+]
+.date[
+### 2025/11/09 (updated: 2025-11-10)
+]
+
+---
+
+background-image: url(https://cdn5.vectorstock.com/i/1000x1000/33/29/discussion-at-the-table-communication-in-the-vector-22823329.jpg)
+background-position: 50% 40%
+background-size: 1000px 1000px
+
+        
+
+
+
+
+
+
+
+
+???
+
+Image credit: [VectorStock.com](https://cdn5.vectorstock.com/i/1000x1000/33/29/discussion-at-the-table-communication-in-the-vector-22823329.jpg)
+
+.presenter-notes-small[Imagine you feeling comfortable having a discussion about how to use the R language to do your data analysis.]
+
+---
+class: center, middle
+
+# The concise story
+
+### Or the things R nerds talk about
+
+???
+  
+.presenter-notes-small[R has been around for 32 years, however it still evolves and grows based on a solid foundation. 
+
+It has been a GNU project since 1997. Writen by statisticians and scientists for the scientific community as a response to the proprietary S language.
+]
+
+---
+class: center, middle, inverse
+
+#Part 1
+
+
+---
+class: left, middle, bg_dotted_waves
+    
+## Operators and Values
+
+R as a calculator has values and _operators_.
+
+The _operators_ act on the values. 
+
+The _relational_ operators compare the ordinality of the values: less than, greater than, equal, not equal.
+
+The _logical_ operators act on a special kind of value: TRUE or FALSE
+
+The mathematical operators act on numbers.
+
+
+???
+  
+&lt;!-- Image credit: [devrant.com](https://cdn3.vectorstock.com/i/1000x1000/95/17/dynamic-wave-of-glowing-points-vector-47569517.jpg) --&gt;
+
+.presenter-notes-small[]
+
+---
+class: left, middle
+
+## Variables, Functions and Arguments
+
+
+The values are stored in _variables_ using the assignment operator.
+
+This facilitates working with values but naming variables is a hard problem.
+
+Functions are like operators, they accept arguments to act on them.
+
+The built-in functions have named and positional arguments.
+
+
+???
+  
+.presenter-notes-small[ 
+]  
+
+---
+class: center, middle, inverse
+
+#Part 2 
+
+---
+
+class: left, middle
+
+## Data types and Data Structures
+
+Introducing the most basic data structure, I give you the vector.
+
+Did you know that vectors store values of the same data type in contiguous memory?
+
+This makes them &lt;span style="color:red"&gt;fast&lt;span&gt;.
+
+???
+
+---
+class: left, middle
+
+## Your Humble Servant: The Mighty Vector
+
+Vectors can be constructed with names.
+
+There are short-cut syntax to build vectors using clever patterns.
+
+Did I mention that R is vectorized by birth?
+
+Physicist can split the atom but data scientists cannot split the R vector.
+
+
+???
+
+####Everything in R is an object, and all objects have a type
+
+.presenter-notes-small[
+
+1. Logical
+
+1. integer
+
+1. double
+
+1. character]
+
+---
+class: left, middle
+
+## More on Vectors
+
+We call subsetting a vector, finding values that we are interested in.
+
+We can subset by position or by a condition the values must satisfy.
+
+We call these conditions: _masks_ when they return **TRUE** or **FALSE**.
+
+We can also use a mask as a filter to extract only the values we are looking for. 
+
+Can you glue two vectors to build a bigger one?
+
+The NA is not to be confused with the DNA. It is a data thing and you should know about its genesis.
+
+Factors: the vectors that store categorical values.
+
+???
+
+.presenter-notes-small[
+]
+
+---
+
+class: left, middle
+
+## Questions after Parts 1 and 2
+
+
+1. What is the purpose of data types and data structures?
+2. We know from theory that using variables in computer programming is useful. However, if you were to put it in your own words, how could you make a case for promoting the use of variables to your peers learning how to program with you?
+3. Did you notice that R creates variables when you assign a value to them? They pop into existence with a value. Can you create an R variable without a value? AI agents can be fooled by this one, they depend on how you phrase the question. What is a value in R?
+4. Of all the abstractions we have studied in R so far, which one do you like the most? (Abstractions are concepts like a data type or a data structure).
+
+---
+
+class: left, middle
+
+## Questions after Parts 1 and 2 (Cont.)
+
+
+5. Which abstraction do you dislike the most if any? (Think of it as making you feel confused about where you would use it)
+6. Can you explain in simple terms what subsetting a vector is? Can you really split an R vector into its elements? Consider subsetting as getting a smaller part of the original where both are of the same "nature", only smaller.
+7. Is subsetting a list different from subsetting a vector? Could you argue why yes or no with your own examples or with borrowed ones?
+8. How would you put together two vectors, like merging them into a single one?
+9. How would you put together two lists? Can you give R code examples?
+
+
+
+---
+class: center, middle, inverse
+
+# Part 3 
+
+---
+
+class: left, middle
+
+## The Matrix 
+
+A bi-dimensional vector with its own bag of goodies.
+
+Element-wise operators on matrices: not to be confused with algebraic matrix operations. 
+
+
+Mask: Vector or Matrix. This is the setup for an explanation of why R behaves the way it does when doing element-wise multiplication with matrices and vectors. 
+
+Recycling Applied. Here, the truth is uncovered, and the mechanics of the language are unveiled for what happened in the previous section. This explanation uses the definition of the matrix constructor, the element-wise multiplication operators, and vector recycling.
+
+Arrays are a special case of matrices and have importance for computer vision, image processing, and neural network mathematical operations. We will skip them.
+
+---
+class: center, middle, inverse
+
+# Part 4 
+
+---
+
+class: left, middle
+
+## The List 
+
+The section Using lists of vectors shows how a list is used to put labels on the x and y-axis of a matrix. One can spend a while studying this example. It shows an algebraic multiplication operator.
+
+The section Subsetting by name or position is worth studying slowly. It is part of why this is called the `$` syntax in R. 
+
+It is not trivial to learn, but it pays off handsomely to differentiate the meaning of the `[]` and `[[ ]]` operators. And the equivalence of the `[[ ]]` and the `$` to subset lists
+
+
+---
+
+class: left, middle
+
+## Questions on lists
+
+1. How would you put together two lists?
+2. Is a list more or less general than a vector? Can you support your answer with an example?
+3. Did you get the difference between the `[]` and the `[[ ]]` operators when used on a list? CAn you explain in your own words?
+4. Why do lists need a new operator? Could they have just used the `[]` operator that we were so comfortable with while using vectors and matrices? This is essential to understanding not just R but other computer languages like Matlab and Python.
+5. What does an R list really store at each position along its backbone?
+
+
+---
+
+class: center, middle
+
+# Thanks!
+
+### Slides prepared with the R packages [**xaringan**](https://github.com/yihui/xaringan) and  [**xaringanthemer**](https://pkg.garrickadenbuie.com/xaringanthemer/)
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="my-macros.js"></script>
+<script>var slideshow = remark.create({
+  "highlightLines": true,
+  "countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

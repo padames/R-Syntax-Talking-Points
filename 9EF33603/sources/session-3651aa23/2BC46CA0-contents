@@ -1,0 +1,96 @@
+.presenter-notes-small {
+  font-weight: normal;
+  font-style: normal;
+  font-size: .75em;
+  font-family: sans-serif;
+  color: purple;
+}
+
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+
+.bold-last-item > ul > li:last-of-type,
+.bold-last-item > ol > li:last-of-type {
+  font-weight: bold;
+}
+
+
+.show-only-last-code-result pre + pre:not(:last-of-type) code[class="remark-code"] {
+    display: none;
+}
+
+
+.design-decision-bug_background {
+  position: relative;
+  z-index: 1;
+}
+
+
+/*
+Source - https://stackoverflow.com/a/64276243/1585486
+Posted by Martin C. Arnold, modified by community. See post 'Timeline' for change history
+Retrieved 2025-11-10, License - CC BY-SA 4.0
+*/
+/*.bg_dotted_waves {
+  position: absolute;
+  background-size: contain;
+  background-position: 100% 150%;
+  z-index: 1;
+} */
+
+.bg_dotted_waves::before {    
+      content: "";
+      background-image: url('https://cdn3.vectorstock.com/i/1000x1000/95/17/dynamic-wave-of-glowing-points-vector-47569517.jpg');
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.65;
+      z-index: -1;
+}
+
+
+.design-decision-bug_background::before {    
+      content: "";
+      background-image: url('https://img.devrant.com/devrant/rant/r_61357_6PTYm.jpg');
+/*      background-size: cover;
+      background-position: 50% 50%; 
+      background-size: contain; */
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px; 
+      opacity: 0.075;
+      z-index: -1;
+}
+
+
+.tenor-gif-embed {
+  margin: auto;
+  position: relative;
+  text-align: center;
+/*  width: 800px;
+  height: 350px;
+  margin: 70px;*/
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
