@@ -3,7 +3,7 @@ title: "R-Syntax Talking Points"
 subtitle: "What you need to know"
 author: "Pablo Adames"
 institute: "CalgaryR"
-date: "2025/11/09 (updated: `r Sys.Date()`)"
+date: "2026/01/05 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: [xaringan-themer.css, "extra-styles.css"]
@@ -130,10 +130,17 @@ The values are stored in _variables_ using the assignment operator.
 
 This facilitates working with values but naming variables is a hard problem.
 
-Functions are like operators, they accept arguments to act on them.
+_Functions_ compartmentalize work, promote code reuse and quality. 
 
-The built-in functions have named and positional arguments.
+There are many built-in functions. You can get most of your tasks done with builtins.
 
+Functions have <span  style="color:blue">_named_</span> and <span  style="color:blue">_positional_</span> arguments.
+
+<!-->The named arguments use the <span style="color:red">'='</span> assignment operator.</-->
+
+The <span style="color:red">'='</span> operator injects values into the function without affecting the global scope. 
+
+The <span style="color:red">'<-'</span> or <span style="color:red">'->'</span> operators affect the global environment but cannot be used to inject named arguments into the function. 
 
 ???
   
@@ -155,7 +162,7 @@ Introducing the most basic data structure, I give you the vector.
 
 Did you know that vectors store values of the same data type in contiguous memory?
 
-This makes them <span style="color:red">fast<span>.
+This makes them <span style="color:red">fast</span>.
 
 ???
 
@@ -168,7 +175,7 @@ Vectors can be constructed with names.
 
 There are short-cut syntax to build vectors using clever patterns.
 
-Did I mention that R is vectorized by birth?
+Did I mention that R is _vectorized_ by birth?
 
 Physicist can split the atom but data scientists cannot split the R vector.
 
@@ -192,11 +199,13 @@ class: left, middle
 
 ## More on Vectors
 
-We call subsetting a vector, finding values that we are interested in.
+We subset a vector when we look for a group of its values that we are interested in.
 
-We can subset by position or by a condition the values must satisfy.
+We can subset by position or by condition.
 
-We call these conditions: _masks_ when they return **TRUE** or **FALSE**.
+In either case we create other vectors and call them _masks_ to do the selection for us.
+
+These _masks_ return **TRUE** or **FALSE** where the position or condition is satisfied.
 
 We can also use a mask as a filter to extract only the values we are looking for. 
 
@@ -204,7 +213,7 @@ Can you glue two vectors to build a bigger one?
 
 The NA is not to be confused with the DNA. It is a data thing and you should know about its genesis.
 
-Factors: the vectors that store categorical values.
+Factors: vectors that store categorical values.
 
 ???
 
@@ -219,8 +228,11 @@ class: left, middle
 
 
 1. What is the purpose of data types and data structures?
-2. We know from theory that using variables in computer programming is useful. However, if you were to put it in your own words, how could you make a case for promoting the use of variables to your peers learning how to program with you?
+
+2. We know from theory that using variables in computer programming is useful. However, if you were to put it in your own words, how could you make a case for promoting the use of variables to your peers?
+
 3. Did you notice that R creates variables when you assign a value to them? They pop into existence with a value. Can you create an R variable without a value? AI agents can be fooled by this one, they depend on how you phrase the question. What is a value in R?
+
 4. Of all the abstractions we have studied in R so far, which one do you like the most? (Abstractions are concepts like a data type or a data structure).
 
 ---
@@ -231,9 +243,13 @@ class: left, middle
 
 
 5. Which abstraction do you dislike the most if any? (Think of it as making you feel confused about where you would use it)
+
 6. Can you explain in simple terms what subsetting a vector is? Can you really split an R vector into its elements? Consider subsetting as getting a smaller part of the original where both are of the same "nature", only smaller.
+
 7. Is subsetting a list different from subsetting a vector? Could you argue why yes or no with your own examples or with borrowed ones?
+
 8. How would you put together two vectors, like merging them into a single one?
+
 9. How would you put together two lists? Can you give R code examples?
 
 
@@ -249,7 +265,7 @@ class: left, middle
 
 ## The Matrix 
 
-A bi-dimensional vector with its own bag of goodies.
+An extension of the vector with its own bag of goodies.
 
 Element-wise operators on matrices: not to be confused with algebraic matrix operations. 
 
@@ -259,6 +275,11 @@ Mask: Vector or Matrix. This is the setup for an explanation of why R behaves th
 Recycling Applied. Here, the truth is uncovered, and the mechanics of the language are unveiled for what happened in the previous section. This explanation uses the definition of the matrix constructor, the element-wise multiplication operators, and vector recycling.
 
 Arrays are a special case of matrices and have importance for computer vision, image processing, and neural network mathematical operations. We will skip them.
+
+
+There is a free 1.5-h lecture on how to use base-R to do high performance computations, all using matrices and vectors.
+
+https://instats.org/seminar/efficient-programming-in-r-free-seminar3
 
 ---
 class: center, middle, inverse
@@ -285,9 +306,13 @@ class: left, middle
 ## Questions on lists
 
 1. How would you put together two lists?
+
 2. Is a list more or less general than a vector? Can you support your answer with an example?
+
 3. Did you get the difference between the `[]` and the `[[ ]]` operators when used on a list? CAn you explain in your own words?
+
 4. Why do lists need a new operator? Could they have just used the `[]` operator that we were so comfortable with while using vectors and matrices? This is essential to understanding not just R but other computer languages like Matlab and Python.
+
 5. What does an R list really store at each position along its backbone?
 
 
@@ -297,6 +322,40 @@ class: center, middle
 
 # Thanks!
 
-### Slides prepared with the R packages [**xaringan**](https://github.com/yihui/xaringan) and  [**xaringanthemer**](https://pkg.garrickadenbuie.com/xaringanthemer/)
+### Slides prepared with the R packages [**xaringan**](https://github.com/yihui/xaringan) and  [**xaringanthemer**](https://instats.org/seminar/introduction-to-r-with-rstudio-free-1-h3)
 
+---
 
+class: center, middle
+
+### Some free follow up references from the Insititute for Statistical Sciences
+
+---
+background-image: url(instats_landing_page.png)
+background-position: center
+background-size: 100% 100%
+
+---
+
+class: center, middle
+
+  [**Efficient Programming in R: **](https://instats.org/seminar/efficient-programming-in-r-free-seminar3)
+  
+  https://instats.org/seminar/efficient-programming-in-r-free-seminar3
+  
+  [**Introduction to R with RStudio: **](https://instats.org/seminar/introduction-to-r-with-rstudio-free-1-h3)
+
+  https://instats.org/seminar/introduction-to-r-with-rstudio-free-1-h3
+
+  [**From SPSS to R:**](https://instats.org/seminar/switching-from-spss-to-r-free-seminar3)
+
+  https://instats.org/seminar/switching-from-spss-to-r-free-seminar3
+
+---
+
+class: center, middle
+
+### Lots more free references in the tutorials
+
+R is very academic and research-oriented. Being free and Open Source you can choose the level of support you need.
+For Academia there is Instats. For industry, there are public and private cloud training and production frameworks like Posit, Bioconductor, and Appsilon, and many consulting firms like Jumping Rivers in the UK or Intertech in the USA. 
