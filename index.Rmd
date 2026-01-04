@@ -103,6 +103,10 @@ class: left, middle, bg_dotted_waves
     
 ## Operators and Values
 
+<div style="border: 2px solid black; padding: 10px; display: inline-block;">
+https://padames-shiny.shinyapps.io/P1_OperatorsVarsBuiltIns/
+</div>
+
 R as a calculator has values and _operators_.
 
 The _operators_ act on the values. 
@@ -157,6 +161,10 @@ class: center, middle, inverse
 class: left, middle
 
 ## Data types and Data Structures
+
+<div style="border: 2px solid black; padding: 10px; display: inline-block;">
+https://padames-shiny.shinyapps.io/P2_Vectors_in_R/
+</div>
 
 Introducing the most basic data structure, I give you the vector.
 
@@ -265,6 +273,10 @@ class: left, middle
 
 ## The Matrix 
 
+<div style="border: 2px solid black; padding: 10px; display: inline-block;">
+https://padames-shiny.shinyapps.io/P3_Matrices_Arrays/
+</div>
+
 An extension of the vector with its own bag of goodies.
 
 Element-wise operators on matrices: not to be confused with algebraic matrix operations. 
@@ -291,6 +303,10 @@ class: center, middle, inverse
 class: left, middle
 
 ## The List 
+
+<div style="border: 2px solid black; padding: 10px; display: inline-block;">
+https://padames-shiny.shinyapps.io/P4_Lists/
+</div>
 
 The section Using lists of vectors shows how a list is used to put labels on the x and y-axis of a matrix. One can spend a while studying this example. It shows an algebraic multiplication operator.
 
@@ -359,3 +375,8 @@ class: center, middle
 
 R is very academic and research-oriented. Being free and Open Source you can choose the level of support you need.
 For Academia there is Instats. For industry, there are public and private cloud training and production frameworks like Posit, Bioconductor, and Appsilon, and many consulting firms like Jumping Rivers in the UK or Intertech in the USA. 
+
+
+The Introduction to R tutorial is deployed in cloud infrastructure provided by Shinyapps.io
+
+The source code can be found in: https://github.com/CalgaryR/R-Syntax-Workshop-2022
